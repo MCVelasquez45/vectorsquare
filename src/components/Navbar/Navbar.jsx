@@ -1,68 +1,71 @@
-import React from "react";
-import { IoMdMenu } from "react-icons/io";
+import React, { useState } from "react";
+import { IoMdMenu, IoMdClose } from "react-icons/io";
 import { motion } from "framer-motion";
 
 const NavbarMenu = [
-  {
-    id: 1,
-    title: "Home",
-    path: "/",
-  },
-  {
-    id: 2,
-    title: "Services",
-    link: "#",
-  },
-  {
-    id: 3,
-    title: "About Us",
-    link: "#",
-  },
-  {
-    id: 4,
-    title: "Our Team",
-    link: "#",
-  },
-  {
-    id: 5,
-    title: "Contact Us",
-    link: "#",
-  },
+  { id: 1, title: "Home", path: "#home" },
+  { id: 2, title: "Services", path: "#services" },
+  { id: 3, title: "About Us", path: "#about" },
+  { id: 4, title: "Our Team", path: "#team" },
+  { id: 5, title: "Contact Us", path: "#contact" },
 ];
+
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
   return (
-    <nav className="relative z-20">
+    <nav className="relative z-20 bg-white shadow-md">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
-        className="container py-10 flex justify-between items-center"
+        className="container py-6 flex justify-between items-center"
       >
-        {/* Logo section */}
-        <div>
-          <h1 className="font-bold text-4xl">Vector Square's Coding Journey</h1>
+        {/* Logo */}
+        <h1 className="font-bold text-2xl">Vector Square's Coding Journey</h1>
+
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex gap-6">
+          {NavbarMenu.map((menu) => (
+            <a
+              key={menu.id}
+              href={menu.path}
+              className="text-lg font-medium hover:text-secondary"
+            >
+              {menu.title}
+            </a>
+          ))}
         </div>
-        {/* Menu section */}
-        <div className="hidden lg:block">
-          <ul className="flex items-center gap-3">
+
+        {/* Mobile Menu Button */}
+        <div className="lg:hidden text-3xl cursor-pointer" onClick={toggleMenu}>
+          {isOpen ? <IoMdClose /> : <IoMdMenu />}
+        </div>
+      </motion.div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
+          className="lg:hidden bg-gray-100"
+        >
+          <ul className="flex flex-col gap-4 p-4">
             {NavbarMenu.map((menu) => (
               <li key={menu.id}>
                 <a
                   href={menu.path}
-                  className="inline-block py-2 px-3 hover:text-secondary relative group"
+                  onClick={() => setIsOpen(false)}
+                  className="text-lg font-medium hover:text-secondary"
                 >
-                  <div className="w-2 h-2 bg-secondary absolute mt-4 rounded-full left-1/2 -translate-x-1/2 top-1/2 bottom-0 group-hover:block hidden"></div>
                   {menu.title}
                 </a>
               </li>
             ))}
-            {/* <button className="primary-btn">Sign In</button> */}
           </ul>
-        </div>
-        {/* Mobile Hamburger menu section */}
-        <div className="lg:hidden">
-          <IoMdMenu className="text-4xl" />
-        </div>
-      </motion.div>
+        </motion.div>
+      )}
     </nav>
   );
 };

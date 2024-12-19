@@ -5,17 +5,31 @@ import Banner from "./components/Banner/Banner";
 import Subscribe from "./components/Subscribe/Subscribe";
 import Banner2 from "./components/Banner/Banner2";
 import Footer from "./components/Footer/Footer";
+import Navbar from "./components/Navbar/Navbar";
 
 const App = () => {
   return (
-    <main className="overflow-x-hidden bg-white text-dark">
-      <Hero />
-      <Services />
-      <Banner />
-      <Subscribe />
-      <Banner2 />
-      <Footer />
-    </main>
+    <>
+      <Navbar />
+      <main className="overflow-x-hidden bg-white text-dark">
+        <section id="home">
+          <Hero />
+        </section>
+        <section id="services">
+          <Services />
+        </section>
+        <section id="about">
+          <Banner />
+        </section>
+        <section id="team">
+          <Banner2 />
+        </section>
+        <section id="contact">
+          <Subscribe />
+        </section>
+        <Footer />
+      </main>
+    </>
   );
 };
 
