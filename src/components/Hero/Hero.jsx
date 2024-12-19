@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../Navbar/Navbar";
+// import Navbar from "../Navbar/Navbar";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Blob from "../../assets/blob.svg";
 import HeroPng from "../../assets/hero.png";
@@ -28,7 +28,7 @@ export const FadeUp = (delay) => {
 const Hero = () => {
   return (
     <section className="bg-light overflow-hidden relative">
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="container grid grid-cols-1 md:grid-cols-2 min-h-[650px]">
         {/* Brand Info */}
         <div className="flex flex-col justify-center py-14 md:py-0 relative z-20">
