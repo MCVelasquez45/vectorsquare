@@ -1,9 +1,8 @@
-import React from "react";
-// import Navbar from "../Navbar/Navbar";
+import React, { useState } from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Blob from "../../assets/blob.svg";
 import HeroPng from "../../assets/hero.png";
-import { animate, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 export const FadeUp = (delay) => {
   return {
@@ -26,9 +25,14 @@ export const FadeUp = (delay) => {
 };
 
 const Hero = () => {
+  const [showContact, setShowContact] = useState(false);
+
+  const toggleContactInfo = () => {
+    setShowContact((prev) => !prev);
+  };
+
   return (
     <section className="bg-light overflow-hidden relative">
-      {/* <Navbar /> */}
       <div className="container grid grid-cols-1 md:grid-cols-2 min-h-[650px]">
         {/* Brand Info */}
         <div className="flex flex-col justify-center py-14 md:py-0 relative z-20">
@@ -39,8 +43,7 @@ const Hero = () => {
               animate="animate"
               className="text-3xl lg:text-5xl font-bold !leading-snug"
             >
-            Let's Learn to Code <span className="text-secondary">Modern Websites</span> with the Latest Technologies
-
+              Let's Learn to Code <span className="text-secondary">Modern Websites</span> with the Latest Technologies
             </motion.h1>
             <motion.div
               variants={FadeUp(0.8)}
@@ -48,11 +51,26 @@ const Hero = () => {
               animate="animate"
               className="flex justify-center md:justify-start"
             >
-              <button className="primary-btn flex items-center gap-2 group">
-                Get Started
+              <button
+                onClick={toggleContactInfo}
+                className="primary-btn flex items-center gap-2 group"
+              >
+                {showContact ? "Hide Contact Info" : "Contact Us"}
                 <IoIosArrowRoundForward className="text-xl group-hover:translate-x-2 group-hover:-rotate-45 duration-300" />
               </button>
             </motion.div>
+            {showContact && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                className="mt-4 p-4 bg-gray-100 rounded-md shadow-lg"
+              >
+                <p className="text-lg font-semibold">Mark Velasquez</p>
+                <p className="text-sm">vectorsquarecoding@gmail.com</p>
+                <p className="text-sm">442-353-1920</p>
+              </motion.div>
+            )}
           </div>
         </div>
         {/* Hero Image */}
@@ -62,7 +80,7 @@ const Hero = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
             src={HeroPng}
-            alt=""
+            alt="Hero"
             className="w-[400px] xl:w-[600px] relative z-10 drop-shadow"
           />
           <motion.img
@@ -70,7 +88,7 @@ const Hero = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeInOut" }}
             src={Blob}
-            alt=""
+            alt="Decorative Blob"
             className="absolute -bottom-32 w-[800px] md:w-[1500px] z-[1] hidden md:block"
           />
         </div>
