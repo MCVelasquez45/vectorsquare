@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 md:gap-4">
           {/* first section */}
           <div className="space-y-4 max-w-[300px]">
-            <h1 className="text-2xl font-bold">The Coding Journey</h1>
+            <h1 className="text-2xl font-bold">Vector Square Coding Journey</h1>
             <p className="text-dark2">
               TCJ is a platform dedicated to empowering aspiring developers.
               From beginner tutorials to advanced programming concepts, we
@@ -32,13 +32,13 @@ const Footer = () => {
                     Web Development
                   </li>
                   <li className="cursor-pointer hover:text-secondary duration-200">
-                    Software Development
+                   MERN Development
                   </li>
                   <li className="cursor-pointer hover:text-secondary duration-200">
-                    Apps Development
+                    GitHub Version Control
                   </li>
                   <li className="cursor-pointer hover:text-secondary duration-200">
-                    E-learning
+                    Visual Studio Code
                   </li>
                 </ul>
               </div>
