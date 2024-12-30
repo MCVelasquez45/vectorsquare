@@ -16,10 +16,9 @@ const Footer = () => {
           <div className="space-y-4 max-w-[300px]">
             <h1 className="text-2xl font-bold">Vector Square Coding Journey</h1>
             <p className="text-dark2">
-              TCJ is a platform dedicated to empowering aspiring developers.
-              From beginner tutorials to advanced programming concepts, we
-              provide a comprehensive learning experience designed to help you
-              master coding skills, build projects, and launch your tech career.
+           VSCJ is your go-to platform for mastering the art of coding and web development. Whether you’re a beginner just starting out or an advanced learner looking to deepen your knowledge, we offer tailored tutorials, hands-on projects, and in-depth programming concepts.
+
+Our goal is to provide a comprehensive learning experience that equips you with the skills to build real-world projects, showcase your expertise, and confidently launch your tech career. Join us and turn your coding dreams into reality!
             </p>
           </div>
           {/* second section */}
@@ -78,16 +77,16 @@ const Footer = () => {
             </div>
             {/* social icons */}
             <div className="flex space-x-6 py-3">
-              <a href="https://chat.whatsapp.com/FQSKgJ5f1eIAhlyF5sVym0">
+              <a href="#">
                 <FaWhatsapp className="cursor-pointer hover:text-primary hover:scale-105 duration-200" />
               </a>
-              <a href="https://www.instagram.com/the.coding.journey/">
+              <a href="#">
                 <FaInstagram className="cursor-pointer hover:text-primary hover:scale-105 duration-200" />
               </a>
-              <a href="https://thecodingjourney.com/">
+              <a href="#">
                 <TbWorldWww className="cursor-pointer hover:text-primary hover:scale-105 duration-200" />
               </a>
-              <a href="https://www.youtube.com/@TheCodingJourney">
+              <a href="#">
                 <FaYoutube className="cursor-pointer hover:text-primary hover:scale-105 duration-200" />
               </a>
             </div>
