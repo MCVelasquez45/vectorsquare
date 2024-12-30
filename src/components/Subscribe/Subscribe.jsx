@@ -20,13 +20,11 @@ const Subscribe = () => {
   const [statusMessage, setStatusMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Update form inputs
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Validate form inputs
   const validateForm = () => {
     if (!formData.fullName || !formData.email) {
       setStatusMessage("Full Name and Email are required!");
@@ -35,10 +33,8 @@ const Subscribe = () => {
     return true;
   };
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (!validateForm()) return;
 
     setIsSubmitting(true);
@@ -51,7 +47,7 @@ const Subscribe = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          access_key: "6dd1f1ce-48fa-4d02-9a5f-784a36c48880", // Replace with your Web3Forms Access Key
+          access_key: "6dd1f1ce-48fa-4d02-9a5f-784a36c48880",
           subject: "New Subscription",
           from_name: formData.fullName,
           from_email: formData.email,
@@ -67,7 +63,7 @@ const Subscribe = () => {
         setTimeout(() => {
           setShowForm(false);
           setStatusMessage("");
-        }, 3000); // Reset after showing success message
+        }, 3000);
       } else {
         setStatusMessage("Something went wrong. Please try again.");
       }
@@ -118,7 +114,7 @@ const Subscribe = () => {
               onSubmit={handleSubmit}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="bg-white shadow-lg rounded-lg p-8 mx-auto max-w-md space-y-6"
+              className="bg-white shadow-lg rounded-lg p-8 mx-auto max-w-md space-y-6 border border-gray-300"
             >
               <h2 className="text-2xl font-bold text-center">
                 Subscribe to Our Program
@@ -144,7 +140,7 @@ const Subscribe = () => {
                   name="fullName"
                   value={formData.fullName}
                   onChange={handleInputChange}
-                  className="w-full p-2 border rounded-lg"
+                  className="w-full p-2 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
                   required
                 />
               </div>
@@ -158,7 +154,7 @@ const Subscribe = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full p-2 border rounded-lg"
+                  className="w-full p-2 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
                   required
                 />
               </div>
@@ -172,13 +168,13 @@ const Subscribe = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   rows="4"
-                  className="w-full p-2 border rounded-lg"
+                  className="w-full p-2 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 ></textarea>
               </div>
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="primary-btn w-full py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-lg"
+                className="mt-6 w-full py-2 text-white bg-yellow-400 hover:bg-yellow-500 rounded-lg shadow-lg"
               >
                 {isSubmitting ? "Submitting..." : "Submit"}
               </button>
