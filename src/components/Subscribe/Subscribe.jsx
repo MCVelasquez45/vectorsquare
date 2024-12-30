@@ -91,16 +91,22 @@ const Subscribe = () => {
           {!showForm ? (
             <div className="text-center space-y-4 lg:max-w-[430px] mx-auto">
               <h1 className="text-4xl font-bold leading-snug">
-                Students are Learning Web Development & Full-Stack MERN
-                Development
+              Get in touch by subscribing now to learn Web Development & Full-Stack MERN Development!
               </h1>
-              <p>
-                Master the skills to build modern websites and full-stack
-                applications using the latest technologies like HTML, CSS,
-                JavaScript, React, Node.js, and MongoDB. Take your coding to
-                the next level with hands-on projects and real-world
-                problem-solving.
-              </p>
+         
+<ol>
+
+    <ul>
+      <li><strong>Full Name</strong>: Enter your first and last name.</li>
+      <li><strong>Email Address</strong>: Provide a valid email address where we can reach you.</li>
+      <li><strong>Message</strong>: Write any questions or specific information you’d like to know about our program.</li>
+    </ul>
+
+  <li>Once all fields are complete, click <strong>Submit</strong>.</li>
+  <li>Our team will get in touch with you shortly with all the details you need about our program!</li>
+</ol>
+<p>We look forward to hearing from you! 😊</p>
+
               <button
                 onClick={() => setShowForm(true)}
                 className="primary-btn mt-8 inline-flex items-center gap-4 group"

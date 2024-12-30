@@ -14,15 +14,15 @@ const Banner2 = () => {
         >
           <div className="text-center md:text-left space-y-4 lg:max-w-[450px]">
             <h1 className="text-4xl font-bold !leading-snug">
-              Join Our Community to Start your Journey
+              Join Our Slack Community to Start your Journey
             </h1>
             <p className=" text-gray-600">
-  Embark on an exciting journey into the dynamic world of web development with Vector Square! Gain hands-on experience, personalized guidance, and the essential skills to build a thriving future in tech.  
-
-  At Vector Square, we’re more than just a learning platform—we’re a vibrant community of passionate learners, seasoned industry experts, and dedicated mentors, all here to support your growth. Together, we’ll tackle real-world challenges, create impactful projects, and equip you with the tools and confidence needed to excel in a rewarding tech career.  
+            Embark on your web development journey with Vector Square! Gain hands-on experience, expert guidance, and essential skills to build a thriving tech future. Join our vibrant community of learners and mentors to tackle real-world challenges, create impactful projects, and grow confidently in your career.
 </p>
+
+<p className="text-gray-600">Join our Slack community to connect with us and get program pricing!</p>
             <a
-              href="https://chat.whatsapp.com/FQSKgJ5f1eIAhlyF5sVym0"
+              href="https://vectorsquarec-jh68932.slack.com/archives/C086Y6J43PW"
               className="primary-btn !mt-8"
             >
               Join Now

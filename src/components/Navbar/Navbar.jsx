@@ -7,7 +7,7 @@ const NavbarMenu = [
   { id: 2, title: "Services", path: "#services" },
   { id: 3, title: "About Us", path: "#about" },
   { id: 4, title: "Our Team", path: "#team" },
-  { id: 5, title: "Contact Us", path: "#contact" },
+  { id: 5, title: "Subscribe Now", path: "#contact" },
 ];
 
 const Navbar = () => {
