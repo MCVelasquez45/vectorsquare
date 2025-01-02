@@ -12,6 +12,7 @@ import { SiExpress } from "react-icons/si";
 import { IoLogoReact } from "react-icons/io5";
 import { FaNode } from "react-icons/fa";
 import { SiMongoose } from "react-icons/si";
+import { PiOpenAiLogo } from "react-icons/pi";
 const ServicesData = [
   {
     id: 1,
@@ -97,6 +98,15 @@ const ServicesData = [
     title: "GitHub",
     link: "#",
     icon: <FaSquareGithub />,
+    delay: 0.6,
+  }
+  ,
+ 
+  {
+    id: 13,
+    title: "OpenAi",
+    link: "#",
+    icon: <PiOpenAiLogo />,
     delay: 0.6,
   }
   
