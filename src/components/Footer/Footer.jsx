@@ -53,10 +53,10 @@ Our goal is to provide a comprehensive learning experience that equips you with 
                     Services
                   </li>
                   <li className="cursor-pointer hover:text-secondary duration-200">
-                    About
+                    About us
                   </li>
                   <li className="cursor-pointer hover:text-secondary duration-200">
-                    Contact
+                    Subscribe
                   </li>
                 </ul>
               </div>
