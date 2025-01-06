@@ -6,6 +6,7 @@ import Subscribe from "./components/Subscribe/Subscribe";
 import Banner2 from "./components/Banner/Banner2";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
         </section>
         <Footer />
       </main>
+      <SpeedInsights />
     </>
   );
 };
