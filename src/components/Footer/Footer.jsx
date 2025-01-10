@@ -1,6 +1,7 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaSlack } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Chat from "../Chat/Chat"; // Import the Chat component
 
 const Footer = () => {
   return (
@@ -122,6 +123,12 @@ const Footer = () => {
               </a>
             </div>
           </div>
+        </div>
+
+        {/* Chat Section */}
+        <div className="mt-10 bg-white p-6 rounded shadow-lg">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">Chat with Victor AI</h2>
+          <Chat /> {/* Embedding the Chat component */}
         </div>
       </motion.div>
     </footer>
