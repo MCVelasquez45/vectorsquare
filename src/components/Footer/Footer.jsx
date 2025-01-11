@@ -127,7 +127,7 @@ const Footer = () => {
 
         {/* Chat Section */}
         <div className="mt-10 bg-white p-6 rounded shadow-lg">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">Chat with Victor AI</h2>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">Ask our AI Victor a Question</h2>
           <Chat /> {/* Embedding the Chat component */}
         </div>
       </motion.div>
